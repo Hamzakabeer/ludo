@@ -1,178 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ludo</title>
 	<style>
-		*
-		{
-			margin:0;
+		* {
+			margin: 0;
 			padding: 0;
 		}
-		.outer
-		{
+
+		.outer {
 			height: 750px;
-			width:750px;
-			margin:0px auto;
-			border:1px solid #f50000;
+			width: 750px;
+			margin: 0px auto;
+			border: 1px solid #f50000;
 		}
-		.box_row
-		{
-		height: 300px;
-		width:750px;
-		background: #ffffff;
-		}
-		.box
-		{
-			height: 200px;
-			width:200px;
-			float: left;
-			background: #ffffff;
-		}
-		.v_lad
-		{
+
+		.box_row {
 			height: 300px;
-			width:150px;
-			background:#ffffff;
+			width: 750px;
+			background: #ffffff;
+		}
+
+		.box {
+			height: 200px;
+			width: 200px;
+			float: left;
+			background: #ffffff;
+		}
+
+		.v_lad {
+			height: 300px;
+			width: 150px;
+			background: #ffffff;
 			float: left;
 		}
-		.circle
-		{
+
+		.circle {
 			height: 50px;
-			width:50px;
+			width: 50px;
 			background: #ffffff;
-			margin:25px;
+			margin: 25px;
 			border-radius: 50%;
 			box-sizing: border-box;
 			float: left;
 		}
-		.border_red
-		{
-			border:16px solid #f50000;
+
+		.border_red {
+			border: 16px solid #f50000;
 		}
-		.border_green
-		{
-			border:16px solid #239a34;
+
+		.border_green {
+			border: 16px solid #239a34;
 		}
-		.border_blue
-		{
-			border:16px solid #34acfd;
+
+		.border_blue {
+			border: 16px solid #34acfd;
 		}
-		.border_yellow
-		{
-			border:16px solid #fdeb29;;
+
+		.border_yellow {
+			border: 16px solid #fdeb29;
+			;
 		}
-		.v_lad_row
-		{
+
+		.v_lad_row {
 			height: 50px;
-			width:150px;
+			width: 150px;
 			background: #ffffff;
 		}
-		.v_lad_cell
-		{
+
+		.v_lad_cell {
 			height: 50px;
-			width:50px;
-			border:1px solid #000;
+			width: 50px;
+			border: 1px solid #000;
 			box-sizing: border-box;
 			float: left;
 			text-align: center;
 		}
-		.red
-		{
+
+		.red {
 			background: #f50000;
 		}
-		.green
-		{
+
+		.green {
 			background: #239a34;
 		}
-		.blue
-		{
+
+		.blue {
 			background: #34acfd;
 		}
-		.yellow
-		{
+
+		.yellow {
 			background: #fdeb29;
 		}
-		.middle_row
-		{
+
+		.middle_row {
 			height: 150px;
-			width:750px;
+			width: 750px;
 
 		}
-		.h_lad
-		{
+
+		.h_lad {
 			height: 150px;
-			width:300px;
-			background:#f50000;
+			width: 300px;
+			background: #f50000;
 			float: left;
 		}
-		.h_lad_row
-		{
+
+		.h_lad_row {
 			height: 50px;
 			width: 300px;
 			background: #ffffff;
 			float: left;
 		}
-		.h_lad_cell
-		{
+
+		.h_lad_cell {
 			height: 50px;
-			width:50px;
-			border:1px solid #000;
+			width: 50px;
+			border: 1px solid #000;
 			float: left;
 			box-sizing: border-box;
 			text-align: center;
 		}
-		.ludo_home
-		{
+
+		.ludo_home {
 			height: 0;
 			width: 0;
-			border-left:75px solid #f50000;
-			border-right:75px solid #fdeb29;
-			border-top:75px solid #239a34;
-			border-bottom:75px solid #34acfd;
-			float: left;	
+			border-left: 75px solid #f50000;
+			border-right: 75px solid #fdeb29;
+			border-top: 75px solid #239a34;
+			border-bottom: 75px solid #34acfd;
+			float: left;
 		}
-		.star
-		{
+
+		.star {
 			font-size: 32px;
 			text-align: center;
 		}
-		.advancepage :active{
+
+		.advancepage :active {
 			text-decoration: none;
 
 		}
-		.advancepage :link{
+
+		.advancepage :link {
 			text-decoration: none;
 		}
-		.advancepage :hover{
+
+		.advancepage :hover {
 			text-decoration: none;
 		}
-		.advancepage :visited{
+
+		.advancepage :visited {
 			text-decoration: none;
 		}
-		.Beginnerlevel :active{
+
+		.Beginnerlevel :active {
 			text-decoration: none;
-}
-.Beginnerlevel :link{
-	text-decoration: none;
-}
-.Beginnerlevel :hover{
-	text-decoration: none;
-}
-.Beginnerlevel :visited{
-	text-decoration: none;
-}
-		
+		}
+
+		.Beginnerlevel :link {
+			text-decoration: none;
+		}
+
+		.Beginnerlevel :hover {
+			text-decoration: none;
+		}
+
+		.Beginnerlevel :visited {
+			text-decoration: none;
+		}
+		.head1{
+			padding: 30px;
+			list-style: none;
+		}
+		.head2{
+			padding: 20px;
+		}
+		.head1{
+			background-color: bisque;
+            color:blue;
+            border-radius: 3px;
+            cursor:wait;
+		}
+		.head2{
+			background-color: bisque;
+            color:blue;
+            border-radius: 3px;
+            cursor:wait;
+		}
 	</style>
-</head>
+
+	<head>
+	</head>
+
 <body>
-	<center>
-	<h1><p>
-     <a href="ludo.html" class="advancepage">Ludo Advance</a>
-	</p></h1>
-	<hr>
-</center>
+	<center class="advancepage">
+		<h1 class="head1">
+			<p>
+				<a href="ludo.html">Ludo Advance</a>
+			</p>
+		</h1>
+		
+		<hr>
+	</center>
 
 	<br><br><br>
 
@@ -224,60 +257,60 @@
 			</div>
 		</div>
 		<div class="middle_row">
-		<div class="h_lad">
-			<div class="h_lad_row">
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell red"><span class="star">&#9733;</span></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-			</div>
-			<div class="h_lad_row">
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell red"></div>
-				<div class="h_lad_cell red"></div>
-				<div class="h_lad_cell red"></div>
-				<div class="h_lad_cell red"></div>
-				<div class="h_lad_cell red"></div>
-			</div>
-			<div class="h_lad_row">
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell red"><span class="star">&#9733;</span></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-			</div>
+			<div class="h_lad">
+				<div class="h_lad_row">
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell red"><span class="star">&#9733;</span></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+				</div>
+				<div class="h_lad_row">
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell red"></div>
+					<div class="h_lad_cell red"></div>
+					<div class="h_lad_cell red"></div>
+					<div class="h_lad_cell red"></div>
+					<div class="h_lad_cell red"></div>
+				</div>
+				<div class="h_lad_row">
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell red"><span class="star">&#9733;</span></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+				</div>
 			</div>
 			<div class="ludo_home"></div>
 			<div class="h_lad">
 				<div class="h_lad_row">
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell yellow"><span class="star">&#9733;</span></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell yellow"><span class="star">&#9733;</span></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+				</div>
+				<div class="h_lad_row">
+					<div class="h_lad_cell yellow"></div>
+					<div class="h_lad_cell yellow"></div>
+					<div class="h_lad_cell yellow"></div>
+					<div class="h_lad_cell yellow"></div>
+					<div class="h_lad_cell yellow"></div>
+					<div class="h_lad_cell "></div>
+				</div>
+				<div class="h_lad_row">
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell"></div>
+					<div class="h_lad_cell yellow"><span class="star">&#9733;</span></div>
+					<div class="h_lad_cell"></div>
+				</div>
 			</div>
-			<div class="h_lad_row">
-				<div class="h_lad_cell yellow"></div>
-				<div class="h_lad_cell yellow"></div>
-				<div class="h_lad_cell yellow"></div>
-				<div class="h_lad_cell yellow"></div>
-				<div class="h_lad_cell yellow"></div>
-				<div class="h_lad_cell "></div>
-			</div>
-			<div class="h_lad_row">
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell"></div>
-				<div class="h_lad_cell yellow"><span class="star">&#9733;</span></div>
-				<div class="h_lad_cell"></div>
-			</div>
-			</div>
-			
+
 		</div>
 		<div class="box_row">
 			<div class="box" style="border:50px solid #34acfd;">
@@ -330,17 +363,22 @@
 	<hr>
 	<br><br><br>
 	<center>
-	<h2><p>
-		Perepared by Muhammad Hamza kabeer
-		Roll-No 324233
-	</p></h2>
-    </center>
+		<h2>
+			<p>
+				Perepared by Muhammad Hamza kabeer
+				Roll-No 324233
+			</p>
+		</h2>
+	</center>
 	<br>
-<br><br>
-<hr>
+	<br><br>
+	<hr>
 
-<center>
-<a href="index.html" class="Beginnerlevel" >Go to Beginner Level</a>
-</center>
+	<center class="Beginnerlevel">
+		<h2 class="head2">
+		<a href="index.html">Go to Beginner Level</a>
+	</h2>
+	</center>
 </body>
+
 </html>
